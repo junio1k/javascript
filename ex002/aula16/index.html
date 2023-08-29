@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de números</title>
+</head>
+<body>
+    <h1>Gerador de números aleátorios de 1 até 1000</h1>
+    <div>
+        <input type="number" name="numero" id="fatorial">
+        <input type="button" value="Fatorar" onclick="fatorar()">
+        <p id="res">Aqui aparecerá o resultado</p>
+    </div>
+    <script>
+        function fatorar(){
+            let res = document.getElementById('res')
+            let fat = Number(document.getElementById('fatorial').value)
+            let f = 1
+            res.innerHTML = `O numero digitado é ${fat}`
+            for(let c = fat ; c > 1 ; c--){
+                res.innerHTML = `O fatorial é ${f *= c}`
+            }
+        }
+    </script>
+    let random = Math.random()
+    let aleatótio = min + Math.trunc( dif * random)
+</body>
+</html>

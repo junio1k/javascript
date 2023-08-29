@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Contagem inteligente</title>
+</head>
+<body>
+    <h1>Contagem "inteligente"</h1>
+    <p>Use qualquer valor para iniciar a contagem</p>
+    <p>Valor inicial:<input type="number" name="numero1" id="txt1"></p>
+    <p>Valor final<input type="number" name="numero2" id="txt2"></p> 
+     
+    <button id="butão" onclick="contar()">contar</button>
+    <section id="saida">
+        <p>A contagem será iniciada</p>
+    </section>
+
+    <script>
+        function contar(){
+            let valor1 = Number(document.getElementById('txt1').value)
+            let valor2 = Number(document.getElementById('txt2').value)
+            let sair = document.getElementById('saida')
+
+            let cont = ''
+            if(valor1<valor2){
+                let cont = valor1
+                while(cont <= valor2){
+                    sair.innerHTML += `${cont}`
+                    cont++
+                }
+            }else if (valor1>valor2){
+                let cont = valor1
+                while(cont >= valor2){
+                    sair.innerHTML += `${cont}`
+                    cont --
+                }
+            }else{
+                window.prompt('Não foi possível iniciar a contagem pois os valores são os mesmos')
+            }
+            
+        }
+    </script>
+    
+</body>
+</html>

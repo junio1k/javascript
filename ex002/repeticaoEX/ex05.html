@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Contagem regrassiva</title>
+</head>
+<body>
+    <h1>Contagem regressiva</h1>
+    <button id="butão" onclick="regressiva()">Clique para iniciar..</button>
+    <section id="seção">
+
+        <p>A contagem irá começar</p>
+    </section>
+    <script>
+        function regressiva(){
+
+            let sair = document.getElementById('seção')
+            sair.innerHTML = `Começando ...`
+            let regreço = 10
+            while (regreço >= 1){
+                sair.innerHTML += `${regreço} &#x1F449;`
+                regreço -= 1
+            }
+        }
+        sair.innerHTML += `&#1F499;` 
+    </script>
+</body>
+</html>

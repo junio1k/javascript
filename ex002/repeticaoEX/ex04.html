@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Contando</title>
+</head>
+<body>
+    <h1>Contando de 1 até 10 (mostrando só os pares)</h1>
+    <button onclick="contar()" id="botao">Contar de 1 a 10</button>
+
+    <section id="seção">
+        <p>Aperte o botão para começar</p>
+    </section>
+    <script>
+        function contar(){
+            let saida = document.getElementById('seção')
+
+            saida.innerHTML += `<h2>Contando os numeros pares</h2>`
+
+            let contar = 2
+            while(contar <= 10){
+                saida.innerHTML += `${contar} &#x1F449;`
+                contar += 2
+            }
+        }
+    </script>
+</body>
+</html>

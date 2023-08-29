@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: rgb(42, 132, 218);
+            color: aliceblue;
+            font-size: 19pt;
+        }
+        h1{
+            color: black;
+            font-size: 35pt;
+        }
+    </style>
+    <title>Aprendendo a mecher com o DOM</title>
+</head>
+<body>
+    <h1>Iniciando os estudo com o Dom.</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div name ="msg">Clique aqui</div>
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[1]
+        /*window.alert(p1.innerHTML)
+        window.document.write(p1.innerHTML)
+        var d = window.document.getElementById('msg')
+        d.style.background = 'black'
+        d = window.document.getElementById('msg').innerHTML = 'ola'*/
+        var d = window.document.getElementsByName('msg')[0]
+        d.innerHTML = 'documento'
+        d.style.background = 'black'
+        
+        
+        
+
+    </script>
+</body>
+</html>

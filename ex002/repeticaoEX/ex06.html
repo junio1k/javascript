@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Contagem escolhida</title>
+</head>
+<body>
+    <h1>Contando de 0 até um número positivo qualquer</h1>
+    <section>
+        <p>Escolha o limite final para a contagem a partir do 0 (<strong>digite apenas números positivos</strong>)</p>
+        <div id="seçao">
+            <p>Valor final:<input type="number" name="num" id="txt1" ><button onclick="contar()">contar</button></p>
+        </div>
+        <div id="saída">
+            <p>Preencha os dados acim e aperto o botão</p>
+        </div>
+    </section>
+    <script>
+        function contar (){
+            let numero =Number(document.getElementById('txt1').value)
+            let sair = document.getElementById('saída')
+            sair.innerHTML = `<h2>Iniciando a contagem de 0 ate ${numero}</h2>`  
+
+            let cont = 0 
+
+            while (cont <= numero){
+                sair.innerHTML +=`${cont}  &#x1F449;` 
+                cont++
+            }
+
+        }
+    </script>
+</body>
+</html>

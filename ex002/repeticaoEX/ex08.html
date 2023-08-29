@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Tabuada</title>
+</head>
+<body>
+    <h1>Super tabuada</h1>
+    <p>Escreva um número na caixa a seguir e te mostrarei a tabuada dele</p>
+    <P><strong>Numero : </strong><input type="number" name="numero" id="num1"> <button id="Butão" onclick="tabuada()">Tabuada</button></P>
+
+    <section id="Saida">
+        <p>Tabuada</p>
+    </section>
+
+    <script>
+        function tabuada(){
+            let numero = Number(document.getElementById('num1').value)
+            let saida = document.getElementById('Saida')
+            saida.innerHTML = `<h2>Tabuada de ${numero}</h2>`
+
+            let c = 1
+            while(c <= 10 ){
+                saida.innerHTML += `${numero} x ${c} = ${numero*c}
+                `
+                c ++
+            }
+        }
+    </script>
+</body>
+</html>
